@@ -1,5 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
-//scanf를 사영할 때, 뒤에 _s를 붙이지 않아도 가능하게 해주는 선언.
+//scanf를 사용할 때, 뒤에 _s를 붙이지 않아도 가능하게 해주는 선언.
 #include <stdio.h>
 
 
@@ -41,6 +41,8 @@ int main(void) {
 
 	x = 187;
 	y = 88;
+	printf("정수 두 개를 입력하세요>> \n");
+	scanf_s("%d%d", &x, &y);
 	sum = x + y;
 	diff = x - y;
 	mult = x * y;
@@ -48,10 +50,10 @@ int main(void) {
 	rem = x % y;
 
 	printf("%d 더하기 %d는 %d 입니다.\n", x, y, sum);
-	printf("%d 빼기 %d는 %d 입니다.\n", x, y, sum);
-	printf("%d 곱하기 %d는 %d 입니다.\n", x, y, sum);
-	printf("%d을(를) %d로 나눈 몫은 %d 입니다.\n", x, y, sum);
-	printf("%d을(를) %d로 나눈 몫은 %d 입니다.\n", x, y, sum);
+	printf("%d 빼기 %d는 %d 입니다.\n", x, y, diff);
+	printf("%d 곱하기 %d는 %d 입니다.\n", x, y, mult);
+	printf("%d을(를) %d로 나눈 몫은 %d 입니다.\n", x, y, quot);
+	printf("%d을(를) %d로 나눈 몫은 %d 입니다.\n", x, y, rem);
 	
 	x = 0;
 	printf("정수 한 개를 입력하세요>> ");
@@ -79,7 +81,7 @@ int main(void) {
 	z = 0;
 	printf("정수 세 개를 입력하세요>> ");
 	scanf_s("%d%d%d", &x, &y, &z);
-	printf("입력 받은 세 정수의 합은 %d입니다.\n", x + y + z)
+	printf("입력 받은 세 정수의 합은 %d입니다.\n", x + y + z);
 
 	return 0;
 }
