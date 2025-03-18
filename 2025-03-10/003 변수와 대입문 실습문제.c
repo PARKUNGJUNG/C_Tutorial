@@ -83,7 +83,7 @@ int main(void) {
 	printf("무인도에 며칠동안 표류했습니까?\n");
 	scanf_s("%d", &day);
 	year = day / 360;
-	month = year % 360 * 30 / ;
+	month = (day - (360 * year)) / 30;
 	day1 = day % 30;
 	printf("%d일은 %d년 %d개월 %d일입니다.\n", day, year, month, day1); //?
 
