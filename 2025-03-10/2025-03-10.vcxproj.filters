@@ -15,16 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="문자열 출력.c">
+    <ClCompile Include="001 문자열 출력.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="변수와 대입문.c">
+    <ClCompile Include="002 변수와 대입문.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="변수와 대입문 실습문제.c">
+    <ClCompile Include="003 변수와 대입문 실습문제.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="단축키">
+    <ClCompile Include="000 단축키">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="004 If문.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

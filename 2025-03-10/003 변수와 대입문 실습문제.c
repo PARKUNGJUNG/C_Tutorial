@@ -2,6 +2,7 @@
 
 int main(void) {
 
+	/*
 	//실습문제1
 	int x = 100;
 	int y = 200;
@@ -62,6 +63,7 @@ int main(void) {
 	heeyeon = heeyeon + 4;
 	printf("준희 = %d, 희연 = %d, 민수 = %d\n", junhee, heeyeon, minsu);
 
+	*/
 	//실습문제6
 	int day = 0;
 	printf("무인도에 며칠동안 표류했습니까?\n");
@@ -80,11 +82,12 @@ int main(void) {
 
 	printf("무인도에 며칠동안 표류했습니까?\n");
 	scanf_s("%d", &day);
-	day1 = day % 30;
-	month = day / 30;
 	year = day / 360;
-	printf("%d일은 %d년 %d개월 %d일입니다.\n", day, year, month, day1); //여기는 교수님한테 물어보기.
+	month = year % 360 * 30 / ;
+	day1 = day % 30;
+	printf("%d일은 %d년 %d개월 %d일입니다.\n", day, year, month, day1); //?
 
+	/*
 	//실습문제 7-1
 	int money = 10000;
 	int price = 0;
@@ -109,9 +112,9 @@ int main(void) {
 	change = money - price * qty;
 	printf("%d원을 내면 거스름돈은 %d원입니다.\n", money, change);
 	int chg5000 = change / 5000;
-	int chg1000 = chg5000 / 1000; //교수님 
-	int chg500 = chg1000 / 500; //교수님
+	int chg1000 = chg5000 / 1000; //?
+	int chg500 = chg1000 / 500; //?
 	printf("5천원권 %d장, 1천원권 %d장, 5백원 동전 %d개입니다.\n", chg5000, chg1000, chg500);
-
+	*/
 	return 0;
 }
