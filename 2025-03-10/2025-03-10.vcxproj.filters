@@ -24,7 +24,7 @@
     <ClCompile Include="003 변수와 대입문 실습문제.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="000 단축키">
+    <ClCompile Include="000 단축키 및 깃허브">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="004 If문.c">
