@@ -21,13 +21,16 @@
     <ClCompile Include="002 변수와 대입문.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="003 변수와 대입문 실습문제.c">
+    <ClCompile Include="003 변수와 대입문 %28실습%29.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="000 단축키 및 깃허브">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="004 If문.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="005 if문 %28실습%29.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
