@@ -33,5 +33,11 @@
     <ClCompile Include="005 if문 %28실습%29.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="006 if문 II 단순반복.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="007 if문 II 단순반복 (실습).c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

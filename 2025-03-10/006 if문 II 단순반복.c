@@ -3,7 +3,7 @@
 #include <stdbool.h>
 
 int main(void) {
-
+	/*
 
 	//if~else if~else
 	int age;
@@ -69,7 +69,7 @@ int main(void) {
 		printf("%d\n", x);
 		Sleep(1000);//ms 단위로 대기하는 함수. 1000 = 1초 "S"가 대문자.
 	}
-	*/
+
 
 	//for 단순 반복
 	//for (int i = 1; i <= 반복횟수; i++) {
@@ -97,21 +97,21 @@ int main(void) {
 		scanf_s("%d", &a);
 		printf("%d\n", a);
 	}
-
+	*/
 
 	//연습문제
-	a = 0;
-	n = 0;
+	int a = 0;
+	int n = 0;
 	int x = 0;
 	printf("몇 번 반복합니까?");
 	scanf_s("%d", &n);
 	printf("초깃값: sum = 0\n");
+
 	for (int i = 1; i <= n; i++) {
+		x += a;
 		printf("정수를 입력하세요>> ");
 		scanf_s("%d", &a);
-		x = a;
 		printf("sum = %d\n", a + x);
-
 	}
 
 
