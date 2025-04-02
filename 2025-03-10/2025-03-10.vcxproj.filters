@@ -39,5 +39,14 @@
     <ClCompile Include="007 if문 II 단순반복 (실습).c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Counters.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Cat &amp;&amp; Soup Void.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Cat &amp;&amp; Soup.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

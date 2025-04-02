@@ -61,8 +61,6 @@ int main(void) {
 	printf("product = %d\n", product); //교수님이 한 방법
 
 
-
-	
 	//실습문제4
 	a = 0;
 	b = 0;
@@ -81,4 +79,6 @@ int main(void) {
 	b = 0;
 	c = 0;
 	printf("세 변의 길이>> ");
+	scanf_s("%d%d%d", &a, &b, &c);
+
 }
