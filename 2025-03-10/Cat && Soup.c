@@ -2,7 +2,11 @@
 #include <stdlib.h>
 #include <Windows.h>
 #include <time.h>
+// #define 컴파일하기 전에 실행되는 컴파일러의 한 부분. 보통 '매크로'라고 함.
 #define _CRT_SECURE_NO_WARNINGS //scanf 오류 방지
+#define ROOM_WIDTH 10 //방의 너비
+#define HME_POS 1 //집 위치
+#define BWL_PO (ROOM_WIDTH - 2) //냄비 위치
 
 int main(void) {
 	srand((unsigned int)time(NULL));
@@ -19,17 +23,18 @@ int main(void) {
 		printf("       \\  '|| ||     \n");
 		printf("        \\)  ()-())   \n\n");
 
-		char sunquan[20];
+		char name[20];
 		printf("야옹이의 이름을 지어 주세요: ");
-		scanf_s("%s", sunquan, 20); //%c를 써야되나?? //scanf_s는 문자열 입력시 뒤에 버퍼의 크기를 입력해야됨.
-		printf("야옹이의 이름은 %s입니다.", sunquan);
+		scanf_s("%s", name, 20); //%c를 써야되나?? //scanf_s는 문자열 입력시 뒤에 버퍼의 크기를 입력해야됨.
+		printf("야옹이의 이름은 %s입니다.", name);
 		Sleep(1000);
 		system("cls");
 
 
-	//1-2)상태 출력 //지금까지 만든 수프의 개수 //친밀도 값과 설명을 출력
+		//1-2)상태 출력 //지금까지 만든 수프의 개수 //친밀도 값과 설명을 출력
 		int soup = 0;
 		int relation = 2;
+		relation <= 0 && relation <= 4;
 		printf("==================== 현재 상태 ====================\n");
 		printf("현재까지 만든 수프 : %d개\n", soup);
 		printf("집사와의 관계(0~4) : %d\n", relation);
@@ -39,10 +44,44 @@ int main(void) {
 		Sleep(500);
 
 
+		//1-4)방 그리기
+		printf("          \n");
+		printf("##########\n");
+		printf("#H      B#\n");
+		printf("#C       #\n");
+		printf("##########\n");
+		printf("          \n");
+
+		int height = 4;
+		int i, j;
+		for (i = 0; i < height; i++) {
+			for (j = 0; j < ROOM_WIDTH; j++) {
+				// 첫 번째 행에서 HME_POS와 BWL_PO 표시
+				if (i == 1 && j == HME_POS) {
+					printf("H"); // 홈 위치 표시
+				}
+				else if (i == 1 && j == BWL_PO) {
+					printf("B"); // 특정 위치 표시
+				}
+				// 경계 그리기
+				else if (i == 0 || i == height - 1 || j == 0 || j == ROOM_WIDTH - 1) {
+					printf("#"); // 경계는 #으로
+				}
+				else {
+					printf(" "); // 내부는 공백으로
+				}
+			}
+			printf("\n"); // 줄 바꿈
+		}
+
+
 		//1-3)상호작용
-		int interaction;
+		int interaction = 0;
+		int relation1 = relation;
 		int dice = rand() % 6 + 1;
+		printf("                                                                \n");
 		printf("어떤 상호작용을 하시겠습니까?   0. 아무것도 하지 않음   1. 긁어 주기\n");
+		Loop:
 		printf(">> ");
 		scanf_s("%d", &interaction);
 		if (interaction == 0 || interaction == 1) {
@@ -54,17 +93,54 @@ int main(void) {
 				printf("주사위를 굴립니다. 또르륵...\n");
 				Sleep(1000);
 				printf("%d이(가) 나왔습니다!\n", dice);
-
-				
-				//주사위, 친밀도 6/4 확률 코딩.
+				if (dice <= 4) {
+					printf("친밀도가 떨어집니다.\n");
+					printf("현재 친밀도: %d\n", relation1 -= 1);
+				}
+				else {
+					printf("다행히 친밀도가 떨어지지 않았습니다.\n");
+					printf("현재 친밀도: %d\n", relation1);
+				}
 			}
 			else {
-				printf("%s의 턱을 긁어주었습니다.\n", sunquan);
-				//6/2확률 코딩.
+				printf("%s의 턱을 긁어주었습니다.\n", name);
+				Sleep(1000);
+				printf("2/6의 확률로 친밀도가 높아집니다.\n");
+				Sleep(1000);
+				printf("주사위를 굴립니다. 또르륵...\n");
+				Sleep(1000);
+				printf("%d이(가) 나왔습니다!\n", dice);
+				if (dice == 5 || dice == 6) {
+					printf("친밀도가 높아집니다.\n");
+					printf("현재 친밀도: %d\n", relation1 += 1);
+				}
+				else {
+					printf("친밀도는 그대로입니다.\n");
+					printf("현재 친밀도: %d\n", relation1);
+				}
 			}
 		}
 		else {
-			//상호작용에서 범위 외의 값이 입력 되면 다시 입력 받기
+			goto Loop;
+		}
+
+
+		//1-5) 이동
+		printf("%s 이동: 집사와 친밀할수록 냄비 쪽으로 갈 확률이 높아집니다.\n", name);
+		printf("주사위 눈이 3 이상이면 냄비 쪽으로 이동합니다.\n");
+		printf("주사위를 굴립니다. 또르륵...\n");
+		printf("%d이 (가) 나왔습니다!\n", dice);
+		if (dice >= 3) {
+			printf("냄비 쪽으로 움직입니다.");
+			//냄비 쪽으로 한 칸 이동
+		}
+		else {
+			printf("");
+			//집 쪽으로 한 칸 이동
 		}
 	}
+
+
 }
+//주사위의 눈이 6 이상일 때, 조건이 발동되는지
+//친밀도가 6 이상일 때, 조건이 발동되는지 (근데, 친밀도는 최대 4로 설정되어있음.)
