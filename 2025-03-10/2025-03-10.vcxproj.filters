@@ -48,5 +48,8 @@
     <ClCompile Include="Cat &amp;&amp; Soup.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="008 문자 입출력 switch문.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

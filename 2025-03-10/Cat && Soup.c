@@ -19,7 +19,7 @@ int main(void) {
 
 		char sunquan[20];
 		printf("야옹이의 이름을 지어 주세요: ");
-		scanf_s("%s", sunquan, 20); //scanf_s는 문자열 입력시 뒤에 버퍼의 크기를 입력해야됨.
+		scanf_s("%s", sunquan, 20); //%c를 써야되나?? //scanf_s는 문자열 입력시 뒤에 버퍼의 크기를 입력해야됨.
 		printf("야옹이의 이름은 %s입니다.", sunquan);
 		Sleep(1000);
 		system("cls");
@@ -28,7 +28,7 @@ int main(void) {
 	//1-2)상태 출력 //지금까지 만든 수프의 개수 //친밀도 값과 설명을 출력
 		int soup = 0;
 		int relation = 2;
-		/*
+		
 		printf(
 		"\
 		==================== 현재 상태 ====================\n\
@@ -57,13 +57,14 @@ int main(void) {
 			printf(">> ");
 			scanf_s("%d", &interaction);
 			if (0 <= interaction && interaction <= 1) {
-			//if (interaction = 0 || 1) { 이건 왜 안됨??
+			//if (interaction = 0 || interaction = 1) { //수정본
 				if (interaction == 0) {
 					printf("아무것도 하지 않습니다.\n");
-					//주사위, 친밀도
+					//주사위, 친밀도 6/4 확률 코딩.
 				}
 				else {
 					printf("%s의 턱을 긁어주었습니다.\n", sunquan);
+					//6/2확률 코딩.
 				}
 			}
 			else {
