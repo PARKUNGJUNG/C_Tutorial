@@ -10,7 +10,14 @@ int main(void) {
 	x = 10;
 	y = 10 + 20;
 	z = 30 * 40;
-	printf("%d,%d\n", x, y);
+	printf("
+		
+		
+		
+		
+		
+		
+		d,%d\n", x, y);
 	
 	
 	//연습문제

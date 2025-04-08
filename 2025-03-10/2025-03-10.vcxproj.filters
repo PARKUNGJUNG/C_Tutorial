@@ -51,5 +51,8 @@
     <ClCompile Include="008 문자 입출력 switch문.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="009 문자 입출력 switch문 (실습).c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

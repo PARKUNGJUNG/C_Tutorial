@@ -164,7 +164,8 @@ int main(void) {
 	x = 10;
 	y = 20;
 
-	printf("%d\n", x < y); //1
+	printf("
+		d\n", x < y); //1
 	printf("%d\n", x > y); //0
 
 

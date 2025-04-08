@@ -10,7 +10,7 @@
 
 //물어볼 질문들 2025-04-08 일자.
 
-//주사위의 눈이 6 이상일 때, 조건이 발동되는지
+//주사위의 눈이 6 이상일 때, 조건이 발동되는지 // (6-친밀도)는 계산식임.
 //친밀도가 6 이상일 때, 조건이 발동되는지 (근데, 친밀도는 최대 4로 설정되어있음.)
 //친밀도의 저장값을 어느 위치에 넣어야 제대로 코드가 발동되는지.
 //현재 상태랑 방을 어떻게 항상 띄우는지.
@@ -19,7 +19,29 @@
 int main(void) {
 	srand((unsigned int)time(NULL));
 
-
+	int cat = 1;
+	int height = 4;
+	for (int i = 0; i < height; i++) {
+		for (int j = 0; j < ROOM_WIDTH; j++) {
+			if (i == 1 && j == HME_POS) {
+				printf("H"); // 집 위치 표시
+			}
+			else if (i == 1 && j == BWL_PO) {
+				printf("B"); // 냄비 위치 표시
+			}
+			else if (i == 2 && j == cat) {
+				printf("C");
+			}
+			// 경계 그리기
+			else if (i == 0 || i == height - 1 || j == 0 || j == ROOM_WIDTH - 1) {
+				printf("#");
+			}
+			else {
+				printf(" ");
+			}
+		}
+		printf("\n"); //이것도 밖으로 꺼내기
+	}
 	//1-1)인트로 & 준비
 	while (1) {
 		printf("****야옹이와 수프****\n\n\n");
@@ -40,8 +62,8 @@ int main(void) {
 
 
 		//1-2)상태 출력 //지금까지 만든 수프의 개수 //친밀도 값과 설명을 출력
-		int soup = 0;
-		int relation = 2;
+		int soup = 0; //밖으로
+		int relation = 2; //밖으로
 		relation <= 0 && relation <= 4;
 		printf("==================== 현재 상태 ====================\n");
 		printf("현재까지 만든 수프 : %d개\n", soup);
@@ -51,41 +73,36 @@ int main(void) {
 		printf("												   \n");
 		Sleep(500);
 
-
+		/*
 		//1-4)방 그리기
-		printf("          \n");
-		printf("##########\n");
-		printf("#H      B#\n");
-		printf("#C       #\n");
-		printf("##########\n");
-		printf("          \n");
-
+		int cat = 1;
 		int height = 4;
-		int i, j;
-		for (i = 0; i < height; i++) {
-			for (j = 0; j < ROOM_WIDTH; j++) {
-				// 첫 번째 행에서 HME_POS와 BWL_PO 표시
+		for (int i = 0; i < height; i++) {
+			for (int j = 0; j < ROOM_WIDTH; j++) {
 				if (i == 1 && j == HME_POS) {
-					printf("H"); // 홈 위치 표시
+					printf("H"); // 집 위치 표시
 				}
 				else if (i == 1 && j == BWL_PO) {
-					printf("B"); // 특정 위치 표시
+					printf("B"); // 냄비 위치 표시
+				}
+				else if (i == 2 && j == cat) {
+					printf("C");
 				}
 				// 경계 그리기
 				else if (i == 0 || i == height - 1 || j == 0 || j == ROOM_WIDTH - 1) {
-					printf("#"); // 경계는 #으로
+					printf("#");
 				}
 				else {
-					printf(" "); // 내부는 공백으로
+					printf(" ");
 				}
 			}
-			printf("\n"); // 줄 바꿈
+			printf("\n"); //이것도 밖으로 꺼내기
 		}
-
+		*/
 
 		//1-3)상호작용
 		int interaction = 0;
-		int relation1 = relation;
+		int relation1 = relation; //밖으로
 		int dice = rand() % 6 + 1;
 		printf("                                                                \n");
 		printf("어떤 상호작용을 하시겠습니까?   0. 아무것도 하지 않음   1. 긁어 주기\n");

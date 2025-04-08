@@ -7,7 +7,8 @@ int main(void) {
 	int x = 100;
 	int y = 200;
 	int tmp1 = x;
-	printf("초기값: x=%d, y=%d\n", x, y);
+	printf("초기값: x=
+	d, y=%d\n", x, y);
 	x = y;
 	y = tmp1;
 	printf("교환 후: x=%d, y=%d\n", x, y);

@@ -9,7 +9,13 @@ int main(void) {
 	int b = 0;
 	while (true) {
 		printf("a b>> ");
-		scanf_s("%d%d", &a, &b);
+		scanf_s("
+			
+			
+			
+			
+			
+			d%d", &a, &b);
 		if (a == 0 && b == 0) {
 			break;
 			if (a > b) {

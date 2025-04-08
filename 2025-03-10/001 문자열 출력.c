@@ -2,7 +2,8 @@
 
 int main(void) {
 	printf("Hello World!\n"); //화면 출력
-	printf("%d + %d = %d\n", 10, 20, 30); //화면 출력
+	printf("
+		d + %d = %d\n", 10, 20, 30); //화면 출력
 	printf("지금이 %d년이니까 %d년생이면 %d살이다.\n", 2021, 2010, 11);
 	printf("%d %d %d %d\n", 2 * 2, 2 * 3, 2 * 4, 2 * 5);
 	printf("%d %d %d\n", 12 / 5, 12 % 5, 2 ^ 3);

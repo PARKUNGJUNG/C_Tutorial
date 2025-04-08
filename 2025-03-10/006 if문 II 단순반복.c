@@ -8,7 +8,8 @@ int main(void) {
 	//if~else if~else
 	int age;
 	printf("나이>> ");
-	scanf_s("%d", &age);
+	scanf_s("
+	d", &age);
 
 	if (age <= 18) {
 		printf("청소년입니다.\n");
