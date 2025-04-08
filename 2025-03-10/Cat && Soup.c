@@ -20,13 +20,14 @@ int main(void) {
 	srand((unsigned int)time(NULL));
 
 	int soup = 0;
-	int relation = 2;
+	int relation = 2;	
 	int relation1 = relation;
-
+	int cat = 1; //고양이의 초기 위치
+	int cat1 = cat; // 현재 고양이 위치
+	int cat2 = cat1;
+	int height = 4;
 
 	//1-4)방 그리기
-	int cat = 1;
-	int height = 4;
 	for (int i = 0; i < height; i++) {
 		for (int j = 0; j < ROOM_WIDTH; j++) {
 			if (i == 1 && j == HME_POS) {
@@ -35,8 +36,11 @@ int main(void) {
 			else if (i == 1 && j == BWL_PO) {
 				printf("B"); // 냄비 위치 표시
 			}
-			else if (i == 2 && j == cat) {
+			else if (i == 2 && j == cat1) {
 				printf("C"); //고양이 위치 표시
+			}
+			else if (i == 2 && j == cat2) {
+				printf("."); //고양이 직전 위치 표시
 			}
 			// 경계 그리기
 			else if (i == 0 || i == height - 1 || j == 0 || j == ROOM_WIDTH - 1) {
@@ -71,7 +75,6 @@ int main(void) {
 
 
 		//1-2)상태 출력 //지금까지 만든 수프의 개수 //친밀도 값과 설명을 출력
-		relation <= 0 && relation <= 4;
 		printf("==================== 현재 상태 ====================\n");
 		printf("현재까지 만든 수프 : %d개\n", soup);
 		printf("집사와의 관계(0~4) : %d\n", relation1);
@@ -82,8 +85,6 @@ int main(void) {
 
 
 		//1-4)방 그리기
-		int cat = 1;
-		int height = 4;
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < ROOM_WIDTH; j++) {
 				if (i == 1 && j == HME_POS) {
@@ -92,8 +93,11 @@ int main(void) {
 				else if (i == 1 && j == BWL_PO) {
 					printf("B"); // 냄비 위치 표시
 				}
-				else if (i == 2 && j == cat) {
+				else if (i == 2 && j == cat1) {
 					printf("C"); //고양이 위치 표시
+				}
+				else if (i == 2 && j == cat2 && cat2 != cat1) {
+					printf("."); //고양이 직전 위치 표시
 				}
 				// 경계 그리기
 				else if (i == 0 || i == height - 1 || j == 0 || j == ROOM_WIDTH - 1) {
@@ -118,15 +122,19 @@ int main(void) {
 		if (interaction == 0 || interaction == 1) {
 			if (interaction == 0) {
 				printf("아무것도 하지 않습니다.\n");
-				Sleep(700);
+				Sleep(500);
 				printf("4/6의 확률로 친밀도가 떨어집니다.\n");
-				Sleep(700);
+				Sleep(500);
 				printf("주사위를 굴립니다. 또르륵...\n");
-				Sleep(700);
+				Sleep(500);
 				printf("%d이(가) 나왔습니다!\n", dice);
 				if (dice <= 4) {
 					printf("친밀도가 떨어집니다.\n");
-					printf("현재 친밀도: %d\n", relation1 -= 1);
+					relation1 -= 1;
+					if (relation1 < 0) {
+						relation1 = 0;
+					}
+					printf("현재 친밀도: %d\n", relation1);
 				}
 				else {
 					printf("다행히 친밀도가 떨어지지 않았습니다.\n");
@@ -135,15 +143,19 @@ int main(void) {
 			}
 			else {
 				printf("%s의 턱을 긁어주었습니다.\n", name);
-				Sleep(700);
+				Sleep(500);
 				printf("2/6의 확률로 친밀도가 높아집니다.\n");
-				Sleep(700);
+				Sleep(500);
 				printf("주사위를 굴립니다. 또르륵...\n");
-				Sleep(700);
+				Sleep(500);
 				printf("%d이(가) 나왔습니다!\n", dice);
 				if (dice == 5 || dice == 6) {
 					printf("친밀도가 높아집니다.\n");
-					printf("현재 친밀도: %d\n", relation1 += 1);
+					relation1 += 1;
+					if (relation1 > 4) {
+						relation1 = 4;
+					}
+					printf("현재 친밀도: %d\n", relation1);
 					printf("\n");
 				}
 				else {
@@ -161,69 +173,52 @@ int main(void) {
 		//1-5) 이동
 		int relation2 = 6 - relation1;
 		printf("%s 이동: 집사와 친밀할수록 냄비 쪽으로 갈 확률이 높아집니다.\n", name);
-		Sleep(700);
+		Sleep(500);
 		printf("주사위 눈이 %d 이상이면 냄비 쪽으로 이동합니다.\n", relation2);
-		Sleep(700);
+		Sleep(500);
 		printf("주사위를 굴립니다. 또르륵...\n");
-		Sleep(700);
+		Sleep(500);
 		printf("%d이 (가) 나왔습니다!\n", dice);
 		if (dice >= relation2) {
 			printf("냄비 쪽으로 움직입니다.\n");
 			printf("\n");
 			//냄비 쪽으로 한 칸 이동
-			int cat = 1;
-			int height = 4;
-			for (int i = 0; i < height; i++) {
-				for (int j = 0; j < ROOM_WIDTH; j++) {
-					if (i == 1 && j == HME_POS) {
-						printf("H"); // 집 위치 표시
-					}
-					else if (i == 1 && j == BWL_PO) {
-						printf("B"); // 냄비 위치 표시
-					}
-					else if (i == 2 && j == cat) {
-						printf("C"); //고양이 위치 표시
-					}
-					// 경계 그리기
-					else if (i == 0 || i == height - 1 || j == 0 || j == ROOM_WIDTH - 1) {
-						printf("#");
-					}
-					else {
-						printf(" ");
-					}
-				}
-				printf("\n");
+			if (cat1 + 1 < ROOM_WIDTH - 1) {
+				cat1++;
 			}
 		}
 		else {
-			printf("\n");
 			//집 쪽으로 한 칸 이동
-			int cat = 1;
-			int height = 4;
-			for (int i = 0; i < height; i++) {
-				for (int j = 0; j < ROOM_WIDTH; j++) {
-					if (i == 1 && j == HME_POS) {
-						printf("H"); // 집 위치 표시
-					}
-					else if (i == 1 && j == BWL_PO) {
-						printf("B"); // 냄비 위치 표시
-					}
-					else if (i == 2 && j == cat) {
-						printf("C"); //고양이 위치 표시
-					}
-					// 경계 그리기
-					else if (i == 0 || i == height - 1 || j == 0 || j == ROOM_WIDTH - 1) {
-						printf("#");
-					}
-					else {
-						printf(" ");
-					}
-				}
-				printf("\n");
+			printf("\n");
+			if (cat1 - 1 > 0) {
+				cat1--;
 			}
+		}
+		for (int i = 0; i < height; i++) {
+			for (int j = 0; j < ROOM_WIDTH; j++) {
+				if (i == 1 && j == HME_POS) {
+					printf("H"); // 집 위치 표시
+				}
+				else if (i == 1 && j == BWL_PO) {
+					printf("B"); // 냄비 위치 표시
+				}
+				else if (i == 2 && j == cat1) {
+					printf("C"); //고양이 위치 표시
+				}
+				else if (i == 2 && j == cat2 && cat2 != cat1) {
+					printf("."); //고양이 직전 위치 표시
+				}
+				// 경계 그리기
+				else if (i == 0 || i == height - 1 || j == 0 || j == ROOM_WIDTH - 1) {
+					printf("#");
+				}
+				else {
+					printf(" ");
+				}
+			}
+			printf("\n");
 		}
 		//Sleep(2500);
 		//system("cls");
 	}
-
 }
