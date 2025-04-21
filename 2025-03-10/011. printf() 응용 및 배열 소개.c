@@ -106,7 +106,7 @@ int main(void) {
 	printf("%.3f\n", dbl);
 	printf("%20.3f\n", dbl); //20은 전체 공간의 크기. 거기서 소수점 3자리만 출력하라는 뜻.
 	printf("%020.3f\n", dbl); //20의 전체 공간의 크기에 0을 채우고 소수점 3자리까지 출력.
-	*/
+	
 
 	///연습문제
 	double x = 12.34;
@@ -151,4 +151,11 @@ int main(void) {
 
 	//배열(Array)
 	//같은 타입의 데이터 여러 개를 일렬로 저장할 수 있는 자료 구조
+	*/
+	
+	///연습문제
+	char alphabets[5] = { 'A', 'p', 'p', 'l' ,'e'};
+	for (int i = 0; i < 5; i++) {
+		printf("%c", alphabets[i]);
+	}
 }
