@@ -51,10 +51,13 @@
     <ClCompile Include="009 문자 입출력 switch문 (실습).c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="011. printf%28%29 응용 및 배열 소개.c">
+    <ClCompile Include="012. printf%28%29 응용 및 배열 소개.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="010. 문자의 표현 문자열 입출력.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="011. 문자의 표현 문자열 입출력 (실습).c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

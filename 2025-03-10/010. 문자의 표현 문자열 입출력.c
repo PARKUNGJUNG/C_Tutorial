@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(void) {
-
+	
 	///문자의 표현
 	char i = 65; 
 	printf("%d %c\n", 65, 65);
@@ -46,7 +46,22 @@ int main(void) {
 	scanf_s("%s%d%s", name, 100, &age, into, 100);
 	printf("이름은 %s, 나이는 %d세, 소속은 %s입니다.", name, age, into);
 	
-	
+	///문자열 입출력(기타)
+	//문자 입출력 함수
+	//getchar() : 문자를 입력 받아서 반환
+	//putchar() : 문자를 출력
 
+	//문자열 입출력 함수
+	//gets_s() : 공백을 포함한 한 줄을 입력받음.
+	//puts() : 화면에 한 줄을 출력. 그리고 자동으로 줄바꿈이 일어남.
+
+	
+	///연습문제
+	char ch3 [100];
+	printf("주소를 입력하세요>> ");
+	gets_s(ch3, 100);
+	printf("입력 받은 주소는\n");
+	puts(ch3);
+	printf("입니다.");
 
 }
