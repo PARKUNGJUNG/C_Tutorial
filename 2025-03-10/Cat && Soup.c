@@ -105,6 +105,7 @@ int main(void) {
 			}
 			printf("\n");
 		}
+		Sleep(500);
 
 
 		//1-3)상호작용
@@ -118,11 +119,8 @@ int main(void) {
 		if (interaction == 0 || interaction == 1) {
 			if (interaction == 0) {
 				printf("아무것도 하지 않습니다.\n");
-				Sleep(500);
 				printf("4/6의 확률로 친밀도가 떨어집니다.\n");
-				Sleep(500);
 				printf("주사위를 굴립니다. 또르륵...\n");
-				Sleep(500);
 				printf("%d이(가) 나왔습니다!\n", dice);
 				if (dice <= 4) {
 					printf("친밀도가 떨어집니다.\n");
@@ -139,11 +137,8 @@ int main(void) {
 			}
 			else {
 				printf("%s의 턱을 긁어주었습니다.\n", name);
-				Sleep(500);
 				printf("2/6의 확률로 친밀도가 높아집니다.\n");
-				Sleep(500);
 				printf("주사위를 굴립니다. 또르륵...\n");
-				Sleep(500);
 				printf("%d이(가) 나왔습니다!\n", dice);
 				if (dice == 5 || dice == 6) {
 					printf("친밀도가 높아집니다.\n");
@@ -164,16 +159,13 @@ int main(void) {
 		else {
 			goto Loop;
 		}
-
+		Sleep(500);
 
 		//1-5) 이동
 		int relation2 = 6 - relation1;
 		printf("%s 이동: 집사와 친밀할수록 냄비 쪽으로 갈 확률이 높아집니다.\n", name);
-		Sleep(500);
 		printf("주사위 눈이 %d 이상이면 냄비 쪽으로 이동합니다.\n", relation2);
-		Sleep(500);
 		printf("주사위를 굴립니다. 또르륵...\n");
-		Sleep(500);
 		printf("%d이 (가) 나왔습니다!\n", dice);
 		cat2 = cat1;
 		if (dice >= relation2) {
@@ -214,7 +206,7 @@ int main(void) {
 			}
 			printf("\n");
 		}
-
+		Sleep(500);
 
 		//1-6) 행동
 		if (HME_POS == cat1) {
@@ -236,15 +228,18 @@ int main(void) {
 			soup++;
 			soup1 = soup;
 			printf("현재까지 만든 수프: %d개\n", soup);
-			cat = 0;
-			cat2 = cat1;
+			//cat1 = cat; //수프를 만들면 고양이의 위치를 초기화
+			//cat2 = cat1; //직전의 위치도 현재 위치랑 동일하게 설정.
+			//수프를 만들면 고양이의 위치를 초기화 시키는 코드입니다.
+			//과제에는 작성할 필요가 없는 코드같지만 초기화를 시켜야 되는지 안되는지 가늠이 안가 코드를 주석처리 했습니다.
 		}
-		//Sleep(2500);
-		//system("cls");
+		Sleep(2500);
+		system("cls");
 	}
 }
+
 ///물어볼 질문들
-//수프를 만들고 고양이 위치를 초기화 해야되는지.
+//수프를 만들고 고양이 위치를 초기화 해야되는지. (해당 코드를 일단 주석처리하여 작성함.)
 
 ///물어본 질문들
 
@@ -253,4 +248,4 @@ int main(void) {
 //현재 상태랑 방을 어떻게 항상 띄우는지. //while 밖으로
 //goto문을 사용해도 되는지.
 //이름 작성하는 코드를 상호작용 할 때마다 띄워야되는지.
-///이름 작성은 처음에 1번만 띄워야됨.
+//이름 작성은 처음에 1번만 띄워야됨.
