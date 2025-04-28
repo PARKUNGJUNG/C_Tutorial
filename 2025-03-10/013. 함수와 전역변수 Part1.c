@@ -32,6 +32,7 @@ void println_stars(int n_star) {
 	putchar('\n');
 }
 
+///입력값, 반환값 모두 필요한 함수
 int sum(int a, int b) { //함수 정의, //a,b는 sum() 함수의 매개 변수.
 	int res = a + b;
 	return res;
