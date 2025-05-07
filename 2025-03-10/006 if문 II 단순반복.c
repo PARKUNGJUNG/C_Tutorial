@@ -98,7 +98,7 @@ int main(void) {
 		scanf_s("%d", &a);
 		printf("%d\n", a);
 	}
-	*/
+	
 
 	//연습문제
 	int a = 0;
@@ -114,7 +114,23 @@ int main(void) {
 		scanf_s("%d", &a);
 		printf("sum = %d\n", a + x);
 	}
+	*/
 
-
+	///연습문제
+	{
+		int n, a;
+		printf("n = ");
+		scanf_s("%d", &n);
+		for (int i = 0; i < n; i++) {
+			printf("정수를 입력하세요>> ");
+			scanf_s("%d", &a);
+			if (a == 0)
+				printf("%d입니다.\n", a);
+			else if (a > 0)
+				printf("%d은(는) 양의 정수\n", a);
+			else if (a < 0)
+				printf("%d은(는) 음의 정수\n", a);
+		}
+	}
 
 }

@@ -2,15 +2,14 @@
 
 int main(void) {
 
-	/*
+	
 	//실습문제1
 	int x = 100;
 	int y = 200;
-	int tmp1 = x;
-	printf("초기값: x=
-	d, y=%d\n", x, y);
+	int tmp = x;
+	printf("초기값: x=%d, y=%d\n", x, y);
 	x = y;
-	y = tmp1;
+	y = tmp;
 	printf("교환 후: x=%d, y=%d\n", x, y);
 
 	//실습문제2
@@ -64,7 +63,7 @@ int main(void) {
 	heeyeon = heeyeon + 4;
 	printf("준희 = %d, 희연 = %d, 민수 = %d\n", junhee, heeyeon, minsu);
 
-	*/
+	
 	//실습문제6
 	int day = 0;
 	printf("무인도에 며칠동안 표류했습니까?\n");

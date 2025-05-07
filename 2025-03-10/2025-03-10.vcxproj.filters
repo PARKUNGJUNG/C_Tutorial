@@ -63,5 +63,8 @@
     <ClCompile Include="013. 함수와 전역변수 Part1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="014 중간고사 연습.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
