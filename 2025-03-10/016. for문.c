@@ -4,7 +4,6 @@
 
 int weight[5] = { 0 };
 
-//weight에서 최솟값을 찾아서 리턴
 void input_weight(void) { //함수의 원형
 	for (int i = 0; i < 5; i++) {
 		printf("몸무게(kg)>> ");
@@ -20,6 +19,17 @@ int min_weight(void) { //함수의 원형
 		}
 	}
 	printf("가장 가벼운 사람은 %dkg\n", min);
+}
+
+void nm_sum(void) {
+	int n, m = 0;
+	int sum = 0;
+	printf("n m >> ");
+	scanf_s("%d%d", &n, &m);
+	for (n; n <= m; n++) {
+		sum += n;
+	}
+	printf("sum = %d\n", sum);
 }
 
 
@@ -55,7 +65,7 @@ int main(void) {
 		 return 0;
 	}
 
-	*/
+	
 	{
 		///연습문제
 		input_weight();
@@ -164,12 +174,70 @@ int main(void) {
 			printf("i = % d\n", i);
 		}
 	}
+	*/
+
+	{
+		///연습문제
+		for (int i = -20; i <= 0; i++) {
+			printf("%d\n", i);
+		}
+		for (int i = 1; i <= 20; i++) {
+				printf("+%d\n", i);
+			}
+	}
+
+
+	{
+		///초깃값, 끝값 지정하기
+		//알파벳 소문자 'a'부터 'z'까지 출력하는 프로그램.
+		for (char ch = 'a'; ch <= 'z'; ch++) {
+			printf("%c", ch);
+		}
+		printf("\n");
+
+		//10부터 20까지 합을 구해서 출력하는 프로그램
+		int sum = 0;
+		for (int i = 10; i <= 20; i++) {
+			sum += i;
+		}
+		printf("sum = %d\n", sum);
+	}
 
 
 	{
 		///연습문제
-		for (int i = -20; i <= 20; i++) {
-
+		//1)
+		int n, m = 0;
+		int sum = 0;
+		printf("n m >> ");
+		scanf_s("%d%d", &n, &m);
+		for (n; n <= m; n++) {
+			sum += n;
 		}
+		printf("sum = %d\n", sum);
+	}
+
+
+	{
+		///연습문제
+		//2)
+		nm_sum();
+	}
+
+
+	{
+		///증감식 지정하기
+		for (int i = 1; i <= 9; i += 2) {
+			printf("i = %d\n", i);
+		}
+	}
+
+
+	{
+		///연습문제
+		int n;
+		printf("n = ");
+		scanf_s("%d", &n);
+
 	}
 }
