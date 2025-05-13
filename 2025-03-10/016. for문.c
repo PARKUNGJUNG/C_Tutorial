@@ -35,7 +35,7 @@ void nm_sum(void) {
 
 
 int main(void) {
-	/*
+	
 
 	{
 		///반복문의 유형
@@ -174,7 +174,7 @@ int main(void) {
 			printf("i = % d\n", i);
 		}
 	}
-	*/
+	
 
 	{
 		///연습문제
@@ -231,13 +231,46 @@ int main(void) {
 			printf("i = %d\n", i);
 		}
 	}
-
+	
 
 	{
 		///연습문제
 		int n;
 		printf("n = ");
 		scanf_s("%d", &n);
+		for (int i = n; i <= n*6; i += n) {
+			printf("%d\n", i);
+		}
 
+	}
+
+
+	{
+		///감소하는 제어변수
+		for (int i = 10; i >= 1; i--) {
+			printf("%d\n", i);
+		}
+	}
+
+
+	{
+		///연습문제
+		for (int i = 9; i >= 1; i--) {
+			printf("2 * %d = %d\n", i, 2 * i);
+		}
+	}
+
+
+	{
+		///연습문제
+		//1)
+		for (int i = 10; i >= 1; i--) {
+			printf("%d\n", 100 * i);
+		}
+
+		//2)
+		for (int i = 10; i >= -10; i -= 2) {
+			printf("%d\n", i);
+		}
 	}
 }
