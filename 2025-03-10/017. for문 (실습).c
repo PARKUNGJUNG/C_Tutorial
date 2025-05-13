@@ -124,7 +124,7 @@ int main(void) {
 		}
 		printf(" %d개", count_mult);
 	}
-
+	*/
 
 	{
 		///실습문제4 교수님 질문
@@ -138,7 +138,7 @@ int main(void) {
 		printf("[%d, %d]에서 %d의 배수는 %d개", n, m, k, count_mult);
 	}
 	
-
+	/*
 	{
 		///실습문제5
 		//1)
@@ -163,14 +163,13 @@ int main(void) {
 			num *= m;
 		}
 	}
-	*/
+	
 
 	{
 		///실습문제5
 		//3)
 		power();
-
-
 	}
+	*/
 }
 				
