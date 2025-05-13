@@ -1,5 +1,17 @@
 #include <stdio.h>
 
+void power(void) {
+	int n, r;
+	printf("n r = ");
+	scanf_s("%d%d", &n, &r);
+	int num = n;
+	int m = n;
+	for (n = 1; n <= r; n++) {
+		printf("%d ", num);
+		num *= m;
+	}
+}
+
 int main(void) {
 
 	/*
@@ -17,7 +29,7 @@ int main(void) {
 		}
 		printf("%d\n", sum);
 	}
-	
+
 
 	{
 		///실습문제2
@@ -56,7 +68,7 @@ int main(void) {
 					printf("A%d = %d\n", i, m1);
 		}
 	}
-	*/
+
 
 	{
 		///실습문제3
@@ -77,10 +89,88 @@ int main(void) {
 		}
 		printf("\n");
 
-		for (int i = 4; i <= 32; i++) {
-			if (i % 4 != 0) { continue; }
+		for (int i = 18; i >= 0; i--) {
+			if (i % 3 != 0) { continue; }
+			printf("%d ", i);
+		}
+		printf("\n");
+
+		for (int i = 80; i >= -100; i -= 30) {
+			printf("%d ", i);
+		}
+		printf("\n");
+
+		for (int i = 3; i <= 729; i *= 3) {
+			printf("%d ", i);
+		}
+		printf("\n");
+
+		for (int i = 256; i >= 1; i /= 2) {
 			printf("%d ", i);
 		}
 		printf("\n");
 	}
+
+
+	{
+		///실습문제4
+		int count_mult = 0;
+		int n, m, k;
+		printf("n m k = ");
+		scanf_s("%d%d%d",&n, &m, &k);
+		printf("[%d, %d]에서 %d의 배수는", n, m, k);
+		for (n; n <= m; n++) {
+			if (n % k == 0) { count_mult ++; }
+		}
+		printf(" %d개", count_mult);
+	}
+
+
+	{
+		///실습문제4 교수님 질문
+		int count_mult = 0;
+		int n, m, k;
+		printf("n m k = ");
+		scanf_s("%d%d%d", &n, &m, &k);
+		for (n; n <= m; n++) {
+			if (n % k == 0) { count_mult++; }
+		}
+		printf("[%d, %d]에서 %d의 배수는 %d개", n, m, k, count_mult);
+	}
+	
+
+	{
+		///실습문제5
+		//1)
+		int num = 2;
+		for (int i = 1; i <= 10; i++) {
+			printf("%d ", num);
+			num *= 2;
+		}
+	}
+	
+	
+	{
+		///실습문제5
+		//2)
+		int n, r;
+		printf("n r = ");
+		scanf_s("%d%d", &n, &r);
+		int num = n;
+		int m = n;
+		for (n = 1; n <= r; n++) {
+			printf("%d ", num);
+			num *= m;
+		}
+	}
+	*/
+
+	{
+		///실습문제5
+		//3)
+		power();
+
+
+	}
 }
+				
