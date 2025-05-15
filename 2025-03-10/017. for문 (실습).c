@@ -252,19 +252,20 @@ int main(void) {
 			x++;
 		}
 	}
-	*/
+	
 	
 	{
-		/*
+		
 		///실습문제9
 		int n;
 		printf("n = ");
 		scanf_s("%d", &n);
-		*/
+		
 	}
-
+	
 
 	{
+	/*
 		///실습문제 11
 		int n;
 		printf("숫자를 입력하세요.\n");
@@ -298,6 +299,44 @@ int main(void) {
 		}
 
 		printf("%d\n", chicken); // n=20일 경우
+		return 0;
+	}
+	*/
+
+	{
+		///실습문제11
+		int n;
+		scanf_s("%d", &n);
+
+		if (n < 1 || n > 20) {
+			printf("숫자를 입력하세요.\n");
+			return 0;
+		}
+
+		int a = 1, b = 1;
+		int chicken = 1; // 초기 치킨 마리수 (F(1)=1)
+
+		if (n == 1) {
+			printf("%d\n", chicken);
+			return 0;
+		}
+
+		for (int i = 3; i <= 20; i++) {
+			int next = a + b; // 다음 피보나치 수
+			if (next == n) { // n이 피보나치 수열에 있으면
+				printf("%d\n", b); // 직전 항 출력
+				return 0;
+			}
+			if (next > n) { // n을 초과하는 첫 번째 항
+				printf("%d\n", b); // n 이하인 가장 큰 피보나치 수
+				return 0;
+			}
+			chicken = b; // 치킨 마리수는 직전 항
+			a = b;
+			b = next;
+		}
+
+		printf("%d\n", b); // n=20일 경우
 		return 0;
 	}
 }
