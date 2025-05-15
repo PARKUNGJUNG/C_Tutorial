@@ -172,7 +172,7 @@ int main(void) {
 		power();
 		printf("return value= ");
 	}
-	
+
 
 	{
 		///실습문제6
@@ -195,17 +195,110 @@ int main(void) {
 		if(Y_etr == true) { printf("한 분씩 입장하시겠습니다~"); }
 		else { printf("%d번 손님 때문에 못 들어가십니다.", N_etr); }
 	}
-	*/
+
 
 	{
 		///실습문제7
-		int arr[4];
-		for (int i = 1; i <= 5; i++) {
+		//1)
+		int a;
+		int cnt = 0;
+		for (int i = 0; i < 5; i++) {
 			printf("정수>> ");
-			scanf_s("%d", &arr[i]);
+			scanf_s("%d", &a);
+			if (a > 0) { cnt++; }
+		}
+		printf("양의 정수: %d개", cnt);
+	}
+
+
+	{
+		///실습문제7
+		//2)
+		int a, n;
+		int cnt_minus = 0;
+		int cnt_plus = 0;
+		int zero = 0;
+		printf("n>> ");
+		scanf_s("%d", &n);
+		for (int i = 0; i < n; i++) {
+			printf("정수>> ");
+			scanf_s("%d", &a);
+			if (a > 0) { cnt_plus++; }
+			else if (a == 0) { zero++; }
+			else if (a < 0) { cnt_minus++; }
+		}
+		printf("양의 정수: %d개\n", cnt_plus);
+		printf("0        : %d개\n", zero);
+		printf("음의 정수: %d개\n", cnt_minus);
+	}
+
+
+	{
+		///실습문제8
+		int x = 0, x_old;
+
+		for (int i = 1; i <= 10; i++) {
+			x_old = x;
+			x++;
+			printf("x: %d --> %d\n", x_old, x);
+		}
+	}
+	{
+		int x = 0, x_new;
+
+		for (int i = 1; i <= 10; i++) {
+			x_new = x + 1;
+			printf("x: %d --> %d\n", x, x_new);
+			x++;
+		}
+	}
+	*/
+	
+	{
+		/*
+		///실습문제9
+		int n;
+		printf("n = ");
+		scanf_s("%d", &n);
+		*/
+	}
+
+
+	{
+		///실습문제 11
+		int n;
+		printf("숫자를 입력하세요.\n");
+		printf("n = ");
+		scanf_s("%d", &n);
+
+		if (n < 1 || n > 20) {
 		}
 
+		int a = 1, b = 1;
+		int chicken = 1; // 초기 치킨 마리수 (F(1)=1)
 
+		if (n == 1) {
+			printf("%d\n", chicken);
+			return 0;
+		}
+
+		for (int i = 3; i <= 20; i++) {
+			int next = a + b; // 다음 피보나치 수
+			if (next > n) { // n을 초과하는 첫 번째 항
+				printf("%d\n", chicken); // 직전 항 출력
+				return 0;
+			}
+			if (next == n) { // n이 피보나치 수열에 있으면
+				printf("%d\n", b); // 직전 항 출력
+				return 0;
+			}
+			chicken = b; // 치킨 마리수는 현재 b
+			a = b;
+			b = next;
+		}
+
+		printf("%d\n", chicken); // n=20일 경우
+		return 0;
 	}
 }
 				
