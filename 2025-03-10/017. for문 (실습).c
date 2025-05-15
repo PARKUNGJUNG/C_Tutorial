@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 void power(void) {
 	int n, r;
@@ -124,7 +125,7 @@ int main(void) {
 		}
 		printf(" %d개", count_mult);
 	}
-	*/
+
 
 	{
 		///실습문제4 교수님 질문
@@ -137,8 +138,8 @@ int main(void) {
 		}
 		printf("[%d, %d]에서 %d의 배수는 %d개", n, m, k, count_mult);
 	}
-	
-	/*
+
+
 	{
 		///실습문제5
 		//1)
@@ -148,8 +149,8 @@ int main(void) {
 			num *= 2;
 		}
 	}
-	
-	
+
+
 	{
 		///실습문제5
 		//2)
@@ -163,13 +164,48 @@ int main(void) {
 			num *= m;
 		}
 	}
-	
+
 
 	{
 		///실습문제5
 		//3)
 		power();
+		printf("return value= ");
+	}
+	
+
+	{
+		///실습문제6
+		//1), 2)
+		int cnt = 1;
+		int N_cnt = 0;
+		int N_etr = 0;
+		bool Y_etr = true;
+		int team_age[4];
+		int team_tall[4];
+		for (int i = 0; i < 4; i++) {
+			N_cnt++;
+			printf("입장객%d 나이 키(cm)>> ", cnt++);
+			scanf_s("%d%d", &team_age[i], &team_tall[i]);
+			if (team_age[i] < 6 && team_tall[i] < 140) {
+				N_etr += N_cnt;
+				Y_etr = false;
+			}
+		}
+		if(Y_etr == true) { printf("한 분씩 입장하시겠습니다~"); }
+		else { printf("%d번 손님 때문에 못 들어가십니다.", N_etr); }
 	}
 	*/
+
+	{
+		///실습문제7
+		int arr[4];
+		for (int i = 1; i <= 5; i++) {
+			printf("정수>> ");
+			scanf_s("%d", &arr[i]);
+		}
+
+
+	}
 }
 				
