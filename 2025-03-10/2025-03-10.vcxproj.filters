@@ -75,5 +75,8 @@
     <ClCompile Include="017. for문 (실습).c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="018. 다중 for문.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
