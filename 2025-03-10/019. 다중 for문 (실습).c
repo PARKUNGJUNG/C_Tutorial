@@ -110,9 +110,9 @@ int main(void) {
 
 		//4)
 		n, m = 0;
-		int k = 6;
 		printf("n m = ");
 		scanf_s("%d%d", &n, &m);
+		int k = m;
 		for (int i = 1; i <= n; i++) {
 			for (int j = i; j <= k; j++) {
 				printf("%02d ", j);
@@ -123,11 +123,15 @@ int main(void) {
 
 		//5)
 		n, m = 0;
+		int re_cnt = 0;
 		printf("n m = ");
 		scanf_s("%d%d", &n, &m);
 		for (int i = 1; i <= n; i++) {
 			for (int j = 1; j <= m; j++) {
-				printf("%d", j);
+				re_cnt++;
+				printf("%d", re_cnt);
+
+
 			}
 			printf("\n");
 		}
