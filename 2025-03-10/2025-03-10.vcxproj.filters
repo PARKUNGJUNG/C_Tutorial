@@ -39,12 +39,6 @@
     <ClCompile Include="007 if문 II 단순반복 (실습).c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Cat &amp;&amp; Soup Void.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Cat &amp;&amp; Soup.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="008 문자 입출력 switch문.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -79,6 +73,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="019. 다중 for문 (실습).c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Cat &amp;&amp; Soup ver1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Cat &amp;&amp; Soup Void.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

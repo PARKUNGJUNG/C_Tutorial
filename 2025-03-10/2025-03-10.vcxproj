@@ -190,10 +190,10 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="019. 다중 for문 (실습).c" />
-    <ClCompile Include="Cat &amp;&amp; Soup Void.c">
+    <ClCompile Include="Cat &amp;&amp; Soup ver1.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Cat &amp;&amp; Soup.c">
+    <ClCompile Include="Cat &amp;&amp; Soup Void.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
   </ItemGroup>
