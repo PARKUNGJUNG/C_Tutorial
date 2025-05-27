@@ -100,6 +100,7 @@ int main(void) {
 		printf("%d ", a_cnt);
 		do {
 			next += a_cnt + d;
+			a_cnt = next;
 			printf("%d ", next);
 		} while (next <= upper_bound);
 		return 0;
