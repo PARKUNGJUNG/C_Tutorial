@@ -81,5 +81,11 @@
     <ClCompile Include="Cat &amp;&amp; Soup Void.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="020. while문 실수 입출력.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="021. while문 실수 입출력 (실습).c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
