@@ -87,5 +87,19 @@
     <ClCompile Include="021. while문 실수 입출력 (실습).c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="022. 자료형.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="024. 기타.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="025. 기타2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="기타.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
