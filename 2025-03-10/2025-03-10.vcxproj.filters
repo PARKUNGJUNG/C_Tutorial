@@ -96,6 +96,9 @@
     <ClCompile Include="025. 기타2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="023. 자료형%28실습%29.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="기타.h">
